@@ -90,10 +90,11 @@ git clone https://github.com/poorvita875/stellora
 
 ## Author
 
-**Poorvita** — built out of frustration with how inaccessible real astronomical data is.
+**Poorvita** - built by someone who genuinely loves astronomy, astrophysics, and everything about space.
 
-*If I had to spend hours confused by NASA's raw data, nobody else should have to.*
-
+*I visited real NASA databases, IRSA, and NeoWs because I was curious — and found that the data 
+was incredible but completely inaccessible. Stellora exists to change that — to make the universe 
+readable for everyone who looks up and wonders.*
 [![Live](https://img.shields.io/badge/🌐-stellora.netlify.app-blue)](https://stellora.netlify.app)
 [![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-yellow)](https://huggingface.co/Poorvita)
 [![GitHub](https://img.shields.io/badge/GitHub-Poorvita-black)](https://github.com/Poorvita)
