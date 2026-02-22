@@ -24,8 +24,7 @@ Two AI models turn complex astronomical data into instant human-readable intelli
 - **Asteroid Risk Explorer** — Search any asteroid, NASA fetches orbital data, RF scores the threat
 - **Live Radar** — Animated real-time radar of all near-Earth objects today
 - **3D Visualization** — Three.js rotating planet + asteroid, mouse-reactive
-- **Particle Nebula** — 120-particle background that reacts to mouse movement
-- **Mobile Responsive** — Works on all screen sizes
+
 
 ---
 
@@ -75,7 +74,7 @@ overall                             0.79
 ## Run Locally
 
 ```bash
-git clone https://github.com/Poorvita/stellora
+git clone https://github.com/poorvita875/stellora
 # Open index.html in browser — no build step needed
 ```
 
@@ -86,7 +85,6 @@ git clone https://github.com/Poorvita/stellora
 - Galaxy recall (67%) limited by noisy training data
 - NASA key visible in client-side JS — proxy backend planned for v2
 
-**Coming soon:** Galaxy morphology · FITS file support · 3D orbit paths · Mobile app
 
 ---
 
