@@ -10,6 +10,8 @@ Built by: Poorvita | © 2026 All Rights Reserved
 # The Problem That Started This :
 Have you ever visited NASA's NeoWs API, IRSA, or any real astronomical database?
 They look like this:
+
+
 {
   "absolute_magnitude_h": 22.1,
   "estimated_diameter": {
@@ -29,7 +31,7 @@ NASA and research institutions produce extraordinary scientific data. But their 
 The question I asked myself: What if anyone — a student, a curious person, a researcher - could understand all of this in seconds? Visually. Intelligently. Beautifully?
 That's what Stellora is.
 
-! What Stellora Actually Does :
+ What Stellora Actually Does :
 Stellora takes three types of brutally complex astronomical data and transforms them into something any human being can immediately understand:
 1. Raw Telescope Images → Instant Object Classification
 NASA and research institutions produce millions of telescope images stored as FITS files with no labels, no context, no explanation. Astronomers spend hours manually categorizing them. The images themselves are scientifically rich but completely opaque to non-experts.
