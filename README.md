@@ -9,6 +9,8 @@ Built by: Poorvita | © 2026 All Rights Reserved
 
 # The Problem That Started This :
 Have you ever visited NASA's NeoWs API, IRSA, or any real astronomical database?
+
+
 They look like this:
 
 
@@ -25,37 +27,22 @@ They look like this:
     "miss_distance": { "kilometers": "4823918.304590" }
   }]
 }
+
+
 Raw. Cold. Incomprehensible to anyone who isn't a professional astronomer.
 I visited these websites myself. I spent hours trying to understand what I was looking at - pages of orbital parameters, FITS image files that require special software to open, magnitude numbers with no context, miss distances in kilometers that mean nothing without a reference point.
 NASA and research institutions produce extraordinary scientific data. But their interfaces are built for experts - not for students, not for curious minds, not even for researchers from adjacent fields who just need a quick answer.
-The question I asked myself: What if anyone — a student, a curious person, a researcher - could understand all of this in seconds? Visually. Intelligently. Beautifully?
+
+
+The question I asked myself: What if anyone - a student, a curious person, a researcher - could understand all of this in seconds? Visually. Intelligently. Beautifully?
 That's what Stellora is.
 
- What Stellora Actually Does :
-Stellora takes three types of brutally complex astronomical data and transforms them into something any human being can immediately understand:
-1. Raw Telescope Images → Instant Object Classification
-NASA and research institutions produce millions of telescope images stored as FITS files with no labels, no context, no explanation. Astronomers spend hours manually categorizing them. The images themselves are scientifically rich but completely opaque to non-experts.
-Stellora's ResNet50 CNN looks at any telescope image and instantly tells you:
+ Stellora bridges the gap between complex astronomical data and 
+human understanding. Upload a telescope image → ResNet50 CNN 
+classifies it instantly. Search any asteroid → NASA orbital data 
++ Random Forest returns a plain-language risk score in seconds.
 
-What type of object it is (Galaxy / Star / Nebula / Planet)
-How confident the model is
-A human-readable description of what you're looking at
-A scientific fact about that object type
-
-What used to take hours of manual lookup → now takes 2 seconds.
-2. Raw Orbital Parameters → Risk Intelligence
-NASA's orbital database contains thousands of near-Earth objects. Each one has dozens of parameters - semi-major axis, eccentricity, inclination, MOID, absolute magnitude. Understanding whether any of these pose a threat to Earth requires years of specialized training.
-Stellora's Random Forest model reads these raw parameters and outputs one clear thing: a risk percentage. Plain language. Immediate understanding.
-
-Miss distance shown as "X× the distance to the Moon" — everyone understands the Moon
-Velocity shown in km/s with human context
-A direct verdict: HIGH RISK / MODERATE / LOW RISK
-Color-coded so the answer is visual, not just numerical
-3. Live NASA Feed → Real-Time Visual Radar
-NASA's NeoWs API streams real-time data about every asteroid approaching Earth today. The raw feed is a wall of JSON that nobody outside a research team looks at.
-Stellora turns it into an animated radar display — the kind you'd see in a space agency mission control room. Every dot is a real asteroid. Every color is a real risk level. Click any dot and see its full profile instantly.
-The data was always public. It just wasn't understandable.
-
+  
 # The Real Journey - What Actually Happened
 This project was not smooth. Here is the complete honest story of everything that was built, broken, debugged, and learned.
 The Dataset Problem (Week 1)
