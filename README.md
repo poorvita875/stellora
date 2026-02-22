@@ -42,7 +42,8 @@ This wasn't smooth. Here's what actually happened:
 
 ## Stack
 
-**Frontend** — HTML, CSS, JS, Three.js, Canvas API, GitHub Pages, ML models and algorithm like RF, ResNet50 etc 
+**Frontend** — HTML, CSS, JS, Three.js, Canvas API, GitHub Pages, ML models and algorithm like RF, ResNet50 etc
+
 **AI Backend** — TensorFlow, Keras, Scikit-learn, Gradio, Hugging Face Spaces  
 **Data** — NASA NeoWs API, NASA Asteroids Dataset, Astronomy Image Dataset (Kaggle)
 
