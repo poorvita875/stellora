@@ -1,4 +1,4 @@
-# 🔭 Stellora — Where Space Meets Insight
+# 🔭 Stellora - Where Space Meets Insight
 
 > NASA publishes real-time data on every asteroid approaching Earth. IRSA hosts millions of telescope images. None of it is readable by normal people. **Stellora fixes that.**
 
