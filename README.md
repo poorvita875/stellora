@@ -112,11 +112,11 @@ Training: Kaggle Notebooks, T4 GPU, Python 3.10
 # Running Locally
 bashgit clone https://github.com/poorvita875/stellora
 cd stellora
-# Open index.html in any browser — no build step required
+Open index.html in any browser — no build step required
 AI backend locally:
 bashpip install tensorflow gradio scikit-learn joblib pillow numpy pandas
 python app.py
-# Visit http://localhost:7860
+ Visit http://localhost:7860
 
 📁 Structure
 stellora/
