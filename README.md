@@ -107,24 +107,7 @@ No paid infrastructure. Fully deployed. Fully functional.
 5) Particle Nebula — 120-particle nebula background that reacts to mouse movement
 6) Animated Confidence Bars — Visual confidence scores with smooth reveal animations
 
-🏗️ Architecture :
-┌──────────────────────────────────────────┐
-│           Stellora Frontend              │
-│         GitHub Pages                     │
-│   HTML + CSS + JS + Three.js             │
-└──────────────┬───────────────────────────┘
-               │
-       ┌───────┴────────┐
-       │                │
-       ▼                ▼
-┌─────────────┐  ┌──────────────────┐
-│  NASA NeoWs │  │  Hugging Face    │
-│     API     │  │     Space        │
-│             │  │                  │
-│ Live asteroid│  │  ResNet50 CNN   │
-│ orbital data │  │  Random Forest  │
-│ (real-time) │  │  Gradio API      │
-└─────────────┘  └──────────────────┘
+
 # Model Performance :
 ResNet50 CNN
 ClassPrecisionRecallF1Galaxy0.910.670.78Star0.660.740.70Nebula0.760.820.79Planet0.850.970.90Overall0.810.790.79
