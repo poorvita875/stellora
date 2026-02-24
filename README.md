@@ -20,7 +20,7 @@ Two AI models turn complex astronomical data into instant human-readable intelli
 
 ## Features
 
-- **Object Classifier** — Upload any telescope image, get instant classification with confidence scores
+- **Object Classifier** — Upload any telescope image and the website will direct the user to HF(HuggingFace), get instant classification with confidence scores
 - **Asteroid Risk Explorer** — Search any asteroid, NASA fetches orbital data, RF scores the threat
 - **Live Radar** — Animated real-time radar of all near-Earth objects today
 - **3D Visualization** — Three.js rotating planet + asteroid, mouse-reactive
