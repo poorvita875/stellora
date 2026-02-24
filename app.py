@@ -76,7 +76,11 @@ def predict_risk(diameter_min, diameter_max, velocity, miss_distance, magnitude)
 
 # ── GRADIO UI ────────────────────────────────────────────────
 with gr.Blocks(title="AstroAI", theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# 🔭 AstroAI — Astronomical Intelligence System")
+    gr.Markdown("""
+# 🔭 AstroAI — Astronomical Intelligence System
+> 🌐 **For the full experience with 3D visualizations, live asteroid radar and interactive UI:**
+> ### [✨ Visit Stellora → stellora.netlify.app](https://stellora.netlify.app)
+""")
     
     with gr.Tabs():
         # TAB 1: OBJECT CLASSIFIER
@@ -89,7 +93,6 @@ with gr.Blocks(title="AstroAI", theme=gr.themes.Soft()) as demo:
             * **Nebulae** (Interstellar clouds)
             * **Planets** (Spherical celestial bodies)
             * *Note: Other objects may yield inaccurate results.*
-
             ---
             ### Model Performance Diagnostics
             * **Overall CNN Accuracy:** **79.31%**
