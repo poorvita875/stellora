@@ -775,7 +775,10 @@ footer{
       <div class="pipe-step">
         <div class="pipe-node pipe-node-2">🧠</div>
         <div class="pipe-title">CNN Classify</div>
-        <div class="pipe-desc">ResNet50 identifies Galaxy, Star, Nebula, or Planet</div>
+<div class="pipe-desc">ResNet50 identifies Galaxy, Star, Nebula, or Planet</div>
+<div class="pipe-branch">Opens on HuggingFace →</div>
+```
+
       </div>
       <div class="pipe-step">
         <div class="pipe-node pipe-node-3">☄️</div>
@@ -833,24 +836,42 @@ Galaxy <strong style="color:var(--gold)">67%</strong> recall
           <div class="dz-orbit-ring"><div class="dz-orbit-dot"></div></div>
           <div class="dz-icon">🔭</div>
         </div>
-        <div class="dz-title">Upload Astronomical Image</div>
-        <div class="dz-sub">drag & drop or click · jpg · png · fits<br>
+        <div class="dz-title">Classify on Hugging Face</div>
+<div class="dz-sub">Click below to open the AI model · jpg · png · fits
 <span style="color:var(--gold);font-size:0.68rem;">⚠ Use high-quality, clear telescope images for best results</span></div>
       </div>
       <div id="img-preview"><img id="preview-img" src="" alt=""></div>
-      <button class="classify-btn" id="classify-btn" disabled>
-        <span id="cbtn-txt">▶ Analyze Object</span>
-        <div class="spin" id="cbtn-spin" style="display:none;width:16px;height:16px;border-width:1.5px;"></div>
-      </button>
+      <a href="https://huggingface.co/spaces/Poorvita/astroai" 
+   target="_blank" 
+   class="classify-btn" 
+   style="text-decoration:none;">
+  🔭 Classify on HuggingFace →
+</a>
     </div>
 
     <div class="glass-card reveal reveal-delay-2">
       <div class="result-empty" id="cnn-empty">
-        <div class="re-rings">
-          <div class="re-ring"></div>
-          <div class="re-ring"></div>
-          <div class="re-ring">🌌</div>
-        </div>
+  <div class="re-rings">
+    <div class="re-ring"></div>
+    <div class="re-ring"></div>
+    <div class="re-ring">🤗</div>
+  </div>
+  <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--ice);">
+    AI Classification on HuggingFace
+  </span>
+  <span style="font-family:var(--font-mono);font-size:0.65rem;color:var(--dim);line-height:1.8;text-align:center;">
+    Click the button below to open<br>
+    the live ResNet50 model<br>
+    in a new tab
+  </span>
+  <a href="https://huggingface.co/spaces/Poorvita/astroai" 
+     target="_blank"
+     style="margin-top:12px;padding:10px 20px;background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.25);border-radius:8px;font-family:var(--font-mono);font-size:0.65rem;color:var(--cyan);text-decoration:none;transition:all 0.2s;"
+     onmouseover="this.style.background='rgba(56,189,248,0.15)'"
+     onmouseout="this.style.background='rgba(56,189,248,0.08)'">
+    🤗 Open HuggingFace Space →
+  </a>
+</div>
         <span style="font-family:var(--font-mono);font-size:0.7rem;">Awaiting image input...</span>
       </div>
       <div id="cnn-result">
@@ -1178,57 +1199,7 @@ dropzone.addEventListener('drop',e=>{
   }
 });
 
-classifyBtn.addEventListener('click',async()=>{
-  document.getElementById('cbtn-txt').style.display='none';
-  document.getElementById('cbtn-spin').style.display='block';
-  classifyBtn.disabled=true;
 
-  try {
-    const file = imgInput.files[0];
-    const base64 = await new Promise((resolve,reject)=>{
-      const reader = new FileReader();
-      reader.onload = ()=>resolve(reader.result);
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-
-    const res = await fetch('https://poorvita-astroai.hf.space/run/predict',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({data:[base64]})
-    });
-
-    if(!res.ok) throw new Error(`API ${res.status}`);
-    const result = await res.json();
-
-    const mdText = result.data[0]||'';
-    const scoresRaw = result.data[1]||{};
-
-    // Extract detected class from markdown
-    const classMatch = mdText.match(/##[^#]*?([A-Z]{3,}) DETECTED/);
-    const detectedClass = classMatch ? classMatch[1].toLowerCase() : 'galaxy';
-
-    // Map HF scores to our CLASS_KEYS order
-    const scores = CLASS_KEYS.map(k=>{
-      const key = Object.keys(scoresRaw).find(sk=>sk.toLowerCase().includes(k));
-      return key ? scoresRaw[key] : 0.25;
-    });
-
-    showCNNResult(detectedClass, scores);
-
-  } catch(err) {
-    console.warn('HF API error, using demo mode:', err);
-    const raw = CLASS_KEYS.map(()=>Math.random());
-    const sum = raw.reduce((a,b)=>a+b,0);
-    const scores = raw.map(s=>s/sum);
-    showCNNResult(CLASS_KEYS[scores.indexOf(Math.max(...scores))],scores);
-    document.getElementById('det-pct').textContent += ' · demo mode';
-  }
-
-  document.getElementById('cbtn-txt').style.display='inline';
-  document.getElementById('cbtn-spin').style.display='none';
-  classifyBtn.disabled=false;
-});
 
 function showCNNResult(cls,scores){
   document.getElementById('cnn-empty').style.display='none';
@@ -1620,5 +1591,6 @@ function renderDetail(i){
 // INIT RADAR
 loadRadar(rDate);
 </script>
+
 </body>
 </html>
